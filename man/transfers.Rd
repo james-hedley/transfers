@@ -72,7 +72,7 @@ The name of a new variable that will contain the earliest episode start date for
 The name of a new variable that will contain the latest episode end date for the larger hospital admission
 }
   \item{totlos}{
-The name of a new variable that will contain the total length of stay in daysfor the larger hospital admission. Calculated as sepdate_last-admdate_first. Minimum length of stay is 1 day
+The name of a new variable that will contain the total length of stay in days for the larger hospital admission. Calculated as sepdate_last - admdate_first. Minimum length of stay is 1 day
 }
 }
 
