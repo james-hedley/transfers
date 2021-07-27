@@ -1,0 +1,10 @@
+Package: transfers
+Type: Package
+Title: Transfers
+Version: 0.1.0
+Author: James Hedley
+Maintainer: The package maintainer <james.a.hedley@gmail.com>
+Description: For use with NSW Admitted Patient Data Collection (APDC) data. transfers() will create new variables to group separate episodes of care together if they are part of a larger hospital admission. This has been adapted from 'transfers.R' created by Timothy Dobbins, available here: https://github.com/timothydobbins/hospital-transfers-multipackage. transfers() is an adaptation of transfers.R from Timothy Dobbins. transfers_sas() is an adaptation of transfers.SAS, implemented in R. These two methods produce slightly different results, hence both functions are available depending on user preference
+License: None
+Encoding: UTF-8
+LazyData: true
