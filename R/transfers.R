@@ -273,6 +273,7 @@ transfers_sas <- function (data=data,
                        sepdate=sepdate,
                        mode=mode,
                        transfer_modes=c('5','9'),
+                       transfer=transfer,
                        episode=episode,
                        fileseq=fileseq,
                        stayseq=stayseq,
@@ -287,6 +288,7 @@ transfers_sas <- function (data=data,
   # sepdate - an existing variable containing separation date
   # mode - an existing variable indicating the mode of separation for each episode
   # transfer_modes - which modes of separation should be counted as transfers?
+  # transfer - a new indicator variable for whether an episode is a transfer (0=not a transfer, 1=transfer)
   # episode - a new variable that will count episodes for each patient ID, counting from 1,2,3, etc.
   # fileseq - a new variable that will count rows in the entire dataset, counting from 1,2,3 etc.
   # stayseq - a new variable that will group episodes into larger admissions, counting from 1,2,3, etc.
@@ -305,6 +307,7 @@ transfers_sas <- function (data=data,
   admdate <- enquo(admdate)
   sepdate <- enquo(sepdate)
   mode <- enquo(mode)
+  transfer <- enquo(transfer)
   episode <- enquo(episode)
   fileseq <- enquo(fileseq)
   stayseq <- enquo(stayseq)
