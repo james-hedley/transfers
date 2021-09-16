@@ -327,7 +327,12 @@ transfers_sas <- function (data=data,
   temp <- temp %>%
     mutate(fileseq = row_number())
 
-
+  
+  # Create in indicator variable for whether an episode is a transfer
+  temp <- temp %>%
+    mutate(transfer=1*(mode %in% transfer_modes))
+  
+  
   # Create a variable 'episode' for episode number for each patient
   temp <- temp %>%
     group_by(id) %>%
