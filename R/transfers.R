@@ -111,7 +111,7 @@ transfers <- function (data=data,
 
   # Sort data by ID, start date, and end date
   temp <- temp %>%
-    arrange(id, admdate, sepdate, mode)
+    arrange(id)
   
   # Create a fileseq variable
   temp <- temp %>%
@@ -329,7 +329,7 @@ transfers_sas <- function (data=data,
 
     # Sort data by ID, start date, and end date
   temp <- temp %>%
-    arrange(id, admdate, sepdate, mode)
+    arrange(id)
 
   # Create a fileseq variable
   temp <- temp %>%
