@@ -11,46 +11,6 @@
 # Last updated: 26th July 2021
 
 
-# Create an example APDC dataset
-library('tidyr')
-library('dplyr')
-
-example_apdc_data <- data.frame(id=c(1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,
-                                      5,6,6,6,6,7,7,7,7,7,7,8,8,8,8,8,8,8,8,9,9,
-                                      10,10,10),
-                                    admdate=c('1jan2020','2jan2020','4jan2020','7jan2020',
-                                              '1jan2020','3jan2020','5jan2020','7jan2020',
-                                              '1jan2020','2jan2020','3jan2020','4jan2020',
-                                              '7jan2020','1jan2020','2jan2020','3jan2020',
-                                              '4jan2020','7jan2020','1jan2020','2jan2020',
-                                              '5jan2020','7jan2020','1jan2020','3jan2020',
-                                              '6jan2020','7jan2020','1jan2020','3jan2020',
-                                              '3jan2020','6jan2020','6jan2020','7jan2020',
-                                              '1jan2020','1jan2020','3jan2020','10jan2020',
-                                              '13jan2020','14jan2020','15jan2020','17jan2020',
-                                              '13jan2020','13jan2020','1jan2020','10jan2020',
-                                              '10jan2020'),
-                                    sepdate=c('6jan2020','3jan2020','5jan2020','8jan2020',
-                                              '3jan2020','6jan2020','6jan2020','8jan2020',
-                                              '2jan2020','3jan2020','6jan2020','5jan2020',
-                                              '8jan2020','2jan2020','3jan2020','6jan2020',
-                                              '5jan2020','8jan2020','3jan2020','6jan2020',
-                                              '6jan2020','8jan2020','2jan2020','4jan2020',
-                                              '6jan2020','8jan2020','2jan2020','3jan2020',
-                                              '5jan2020','6jan2020','6jan2020','8jan2020',
-                                              '1jan2020','14jan2020','3jan2020','10jan2020',
-                                              '13jan2020','15jan2020','17jan2020','20jan2020',
-                                              '13jan2020','17jan2020','10jan2020','10jan2020',
-                                              '20jan2020'),
-                                    mode=c('1','1','1','1','5','1','1','1','5','5','1',
-                                           '1','1','1','1','1','1','1','5','1','1','1',
-                                           '5','1','1','1','1','1','1','1','1','1','1',
-                                           '1','9','9','9','1','1','1','9','1','1','9','1')) %>%
-  as_tibble()  %>%
-  mutate(admdate=as.Date(admdate,format="%d%b%Y"),
-         sepdate=as.Date(sepdate,format="%d%b%Y"))
-
-
 # Create a function to add group transfers into the same admission ----
 transfers <- function (data=data,
                        id=id,
