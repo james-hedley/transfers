@@ -45,7 +45,7 @@ transfers <- function (data=data,
   # Load required libraries
   library('tidyr')
   library('dplyr')
-
+  library('lubridate')
 
   # Enquote input variable names
   id <- enquo(id)
